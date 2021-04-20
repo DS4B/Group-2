@@ -20,8 +20,8 @@ Final Project for Group 2 - Angie, JoJo, Yan, Britnie
   to GHG emission.
   The program will also allow users to assess their contribution to greenhouse gas emission based on their current diet.
 
-
-Update on 4/19:
+***\
+Update on 4/19:*
 
 - What did you accomplish this week?
   - Created a map depicting emissions from food production using Tableau over a period of several decades and created a ranked bar chart for overall CO2 emissions by country
