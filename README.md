@@ -14,7 +14,7 @@ Final Project for Group 2 - Angie, JoJo, Yan, Britnie
   - What food groups are the most sustainable in terms of GHG emissions and how can individual diets affect the environment?
   - Are global emissions distributed differently between countries when looking at food consumption/production?
 
-- What’s your target deliverable?
+- What’s your target deliverable?\
   We will produce a platform that shows the food carbon footprint trend in the past few decades around the globe and the predicted trajectory of food production contribution 
   to GHG emission.
   The program will also allow users to assess their contribution to greenhouse gas emission based on their current diet.
