@@ -40,3 +40,7 @@ Final Project for Group 2 - Angie, JoJo, Yan, Britnie
 
 - Do you have any questions or need any help from us?
   - Apply streamlit functions!
+
+**Screenshots of our work so far** 
+
+<img width="411" alt="Screen Shot 2021-04-19 at 9 02 34 PM" src="https://user-images.githubusercontent.com/78391547/115321882-cb971b00-a152-11eb-9efb-395e7579a273.png">
