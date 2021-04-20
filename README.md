@@ -1,16 +1,16 @@
 # Group-2
 Final Project for Group 2 - Angie, JoJo, Yan, Britnie
 
-Project Proposal:
+**Project Proposal:**
 
-Delving into the sustainability of food production
+**Delving into the sustainability of food production**
 
-What’s the motivation for your project?
+- What’s the motivation for your project?
   We hope to visualize the environmental impact of food production and consumption, specifically looking at the greenhouse gas (GHG) emissions associated with different food 
   groups (plant starches, plant proteins, animal proteins, vegetables, fruits, and dairy). We hope to present these datasets in a way that speaks more to us as foodconsumers, 
   hence we will also include a function that allows users to estimate their food GHG contributions from their diets.
 
-What are the questions we’d like to explore?
+- What are the questions we’d like to explore?
   - How have GHG emissions changed over time across the world?
   - What food groups are the most sustainable in terms of GHG emissions and how can individual diets affect the environment?
   - Are global emissions distributed differently between countries when looking at food consumption/production?
