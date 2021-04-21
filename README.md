@@ -44,4 +44,4 @@ Final Project for Group 2 - Angie, JoJo, Yan, Britnie
 **Screenshots of our work so far** 
 
 <img width="411" alt="Screen Shot 2021-04-19 at 9 02 34 PM" src="https://user-images.githubusercontent.com/78391547/115321882-cb971b00-a152-11eb-9efb-395e7579a273.png">
-
+![Tableau_Map_So_Far](https://user-images.githubusercontent.com/77645244/115484571-07001b00-a221-11eb-8f21-dbc027d77596.png)
