@@ -24,13 +24,18 @@ def main():
     {
       vizElement.style.width = '1130px';
       vizElement.style.height = '727px';
+      document.write("ITS ONE");
     } else if (divElement.offsetWidth > 500)
     {
       vizElement.style.width = '1130px';
       vizElement.style.height = '727px';
+            document.write("ITS TWO");
+
     } else {
       vizElement.style.width = '100%';
       vizElement.style.height = '1527px';
+            document.write("ITS THREE");
+
     }
     
   """
