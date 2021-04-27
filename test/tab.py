@@ -6,6 +6,7 @@ st.write("Annual consumption-based CO2 emissions, measured in million tonnes per
 
 def main():
   html_temp = """
+    <p id = "test"></p>
     <script type='text/javascript' src='https://prod-useast-b.online.tableau.com/javascripts/api/viz_v1.js'></script>
     
     <div class='tableauPlaceholder' id='my_map' style='position:relative'>    
@@ -24,17 +25,17 @@ def main():
     {
       vizElement.style.width = '1130px';
       vizElement.style.height = '727px';
-      document.write("ITS ONE");
+            document.getElementById("test").innerHTML = "ITS ONE";
     } else if (divElement.offsetWidth > 500)
     {
       vizElement.style.width = '1130px';
       vizElement.style.height = '727px';
-            document.write("ITS TWO");
+            document.getElementById("test").innerHTML = "ITS TWO";
 
     } else {
       vizElement.style.width = '100%';
       vizElement.style.height = '1527px';
-            document.write("ITS THREE");
+            document.getElementById("test").innerHTML = "ITS THREE";
 
     }
     
