@@ -31,7 +31,7 @@ def main():
     
   """
   
-  components.html(html_temp)
+  components.html(html_temp, width=1130, height=700)
 
 if __name__ == "__main__":
   main()
