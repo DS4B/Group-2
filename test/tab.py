@@ -15,8 +15,7 @@ def main():
     <param name='site_root' value='&#47;t&#47;btnn' />
     <param name='name' value='DataScienceforBiotechnology&#47;Sheet1' />
     <param name='tabs' value='no' />
-    <param name='toolbar' value='yes' />
-    <param name='showAppBanner' value='false' /></object></div>"
+    <param name='toolbar' value='yes' /></div>
     
      var divElement = document.getElementById('my_map');
     var vizElement = divElement.getElementsByTagName('object')[0];
