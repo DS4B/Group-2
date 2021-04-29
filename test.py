@@ -11,4 +11,4 @@ value='https%3A%2F%2Fprod-useast-b.online.tableau.com%2F' /> <param name='embed_
 name='name' value='Food_GHG_1990-2015_by_tonnes&#47;Dashboard1' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /
 ></object></div>
 """
-components.html(food_ghg_map, width = 850, height = 400, scrolling = true)
+components.html(food_ghg_map, width = 850, height = 400, scrolling = True)
