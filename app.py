@@ -1,18 +1,25 @@
 import streamlit as st
 
 st.title("Food Carbon Footprint")
-st.header("DS4B Final Project, Group 2")
+st.subheader("DS4B Final Project")
+st.text('Britnie Nguyen, Angeline Utomo, JoJo Zhang, Yan Zhou Chen)
+st.text('Spring 2021')
 
 import pandas as pd
 from PIL import Image
-image = Image.open('food_production_chain.jpeg')
-st.image(image, use_column_width = True)
+
+col1, col2 = st.beta_columns(2)
+with col1:
+        image = Image.open('food_production_chain.jpeg')
+        st.image(image, use_column_width = True)
+        
+with col2:
+        st.text('What is this image and why we should be talking about food carbon footprint!')
+
 
 df = pd.read_csv("GHG avg by food groups.csv")
 avg_ghg = df.pop('Avg GHG (kg CO2 equivalent/ kg product)')
 df = df.dropna()
-st.dataframe(df)
-
 
 grouped_df = df.groupby(by=['Food group']).mean()
 grouped_df = grouped_df.sort_values(by = 'Total GHG (kg CO2 equivalent/ kg product)', ascending = False)
