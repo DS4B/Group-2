@@ -17,4 +17,4 @@ st.write(grouped_df)
 
 # Create bar chart for Total GHG by food group
 f = grouped_df.plot.bar(stacked = True)
-st.pyplot(f)
+st.pyplot()
