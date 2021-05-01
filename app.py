@@ -1,9 +1,12 @@
 import streamlit as st
 
-st.title("Group 2!")
-st.title("DS4B Final Project")
+st.title("Food Carbon Footprint")
+st.header("DS4B Final Project, Group 2")
 
 import pandas as pd
+from PIL import Image
+image = Image.open('food_production_chain.jpeg')
+st.image(image, use_column_width = True)
 
 df = pd.read_csv("GHG avg by food groups.csv")
 avg_ghg = df.pop('Avg GHG (kg CO2 equivalent/ kg product)')
