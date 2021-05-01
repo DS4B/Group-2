@@ -26,6 +26,7 @@ st.pyplot()
 # Plot individual food groups 
 food_groups = list(set(df['Food group']))
 for food_group in food_groups:
-  food_df = df[df['Food group'] == food_group].pop('Total GHG (kg CO2 equivalent/ kg product)')
+  food_df = df[df['Food group'] == food_group]
+  food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
   fig = food_df.plot.bar(stacked = True)
   st.pyplot()
