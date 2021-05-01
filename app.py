@@ -14,7 +14,7 @@ with col1:
         st.image(image, use_column_width = True)
         
 with col2:
-        st.text('What is this image and why we should be talking about food carbon footprint!')
+        st.write('What is this image and why we should be talking about food carbon footprint!')
 
 
 df = pd.read_csv("GHG avg by food groups.csv")
