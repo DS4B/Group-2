@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title("Food Carbon Footprint")
 st.subheader("DS4B Final Project")
-st.text('Britnie Nguyen, Angeline Utomo, JoJo Zhang, Yan Zhou Chen)
+st.text('Britnie Nguyen, Angeline Utomo, JoJo Zhang, Yan Zhou Chen')
 st.text('Spring 2021')
 
 import pandas as pd
