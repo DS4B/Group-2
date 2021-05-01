@@ -15,6 +15,10 @@ grouped_df = df.groupby(by=['Food group']).mean()
 grouped_df = grouped_df.sort_values(by = 'Total GHG (kg CO2 equivalent/ kg product)', ascending = False)
 st.write(grouped_df)
 
+
 # Create bar chart for Total GHG by food group
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 f = grouped_df.plot.bar(stacked = True)
 st.pyplot()
+
