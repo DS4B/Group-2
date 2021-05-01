@@ -24,8 +24,8 @@ f = new_grouped_df.plot.bar(stacked = True)
 st.pyplot()
 
 # Plot individual food groups 
-food_groups = list(set(df['Food groups']))
+food_groups = list(set(df['Food group']))
 for food_group in food_groups:
-  group_df = df[df['Food group'] == food_group].pop('Total GHG (kg CO2 equivalent/ kg product)')
-  fig = group_df.plot.bar(stacked = True)
+  food_df = df[df['Food group'] == food_group].pop('Total GHG (kg CO2 equivalent/ kg product)')
+  fig = food_df.plot.bar(stacked = True)
   st.pyplot()
