@@ -98,7 +98,7 @@ if selected_metrics == 'Other':
 
 
 
-  st.header("How much food GHG does your meal contribute?")
+st.header("How much food GHG does your meal contribute?")
 
 # Make food_dict a global variable so my functions can have access to it
 global food_dict
