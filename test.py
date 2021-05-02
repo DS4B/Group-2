@@ -1,8 +1,7 @@
 import streamlit as st
-import streamlit.components.v1 as components
 import pandas as pd
 
-st.write("Hello world")
+import streamlit.components.v1 as components
 df = pd.read_csv("co2_emission.csv")
 
 food_ghg_map = """<script type='text/javascript' src='https://prod-useast-b.online.tableau.com/javascripts/api/viz_v1.js'></script><div 
