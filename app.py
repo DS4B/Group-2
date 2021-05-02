@@ -16,7 +16,7 @@ with col1:
 with col2:
         st.write('What is this image and why we should be talking about food carbon footprint!')
 
-
+#---------------------------YAN----------------------------
 df = pd.read_csv("GHG avg by food groups.csv")
 avg_ghg = df.pop('Avg GHG (kg CO2 equivalent/ kg product)')
 df = df.dropna()
@@ -96,7 +96,7 @@ if selected_metrics == 'Other':
   fig = food_df.plot.bar(stacked = True)
   st.pyplot()
 
-
+#---------------------------ANGIE----------------------------
 
 st.header("How much food GHG does your meal contribute?")
 
