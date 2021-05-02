@@ -129,7 +129,7 @@ with col2:
 
         if selected_metrics_2 == 'Plant starch':
           food_group_2 = 'Plant starch'
-          food_df_2 = df[df['Food group'] == food_group]
+          food_df_2 = df[df['Food group'] == food_group_2]
           food_df_2.pop('Total GHG (kg CO2 equivalent/ kg product)')
           food_df_2 = food_df_2.set_index('Food product')
           fig = food_df_2.plot.bar(stacked = True)
@@ -137,7 +137,7 @@ with col2:
 
         if selected_metrics_2 == 'Plant protein':
           food_group_2 = 'Plant protein'
-          food_df_2 = df[df['Food group'] == food_group]
+          food_df_2 = df[df['Food group'] == food_group_2]
           food_df_2.pop('Total GHG (kg CO2 equivalent/ kg product)')
           food_df_2 = food_df_2.set_index('Food product')
           fig = food_df_2.plot.bar(stacked = True)
@@ -145,7 +145,7 @@ with col2:
 
         if selected_metrics_2 == 'Animal protein':
           food_group_2 = 'Animal protein'
-          food_df_2 = df[df['Food group'] == food_group]
+          food_df_2 = df[df['Food group'] == food_group_2]
           food_df_2.pop('Total GHG (kg CO2 equivalent/ kg product)')
           food_df_2 = food_df_2.set_index('Food product')
           fig = food_df_2.plot.bar(stacked = True)
@@ -153,7 +153,7 @@ with col2:
 
         if selected_metrics_2 == 'Vegetable':
           food_group_2 = 'Vegetable'
-          food_df_2 = df[df['Food group'] == food_group]
+          food_df_2 = df[df['Food group'] == food_group_2]
           food_df_2.pop('Total GHG (kg CO2 equivalent/ kg product)')
           food_df_2 = food_df_2.set_index('Food product')
           fig = food_df_2.plot.bar(stacked = True)
@@ -162,7 +162,7 @@ with col2:
 
         if selected_metrics_2 == 'Fruit':
           food_group_2 =  'Fruit'
-          food_df_2 = df[df['Food group'] == food_group]
+          food_df_2 = df[df['Food group'] == food_group_2]
           food_df_2.pop('Total GHG (kg CO2 equivalent/ kg product)')
           food_df_2 = food_df_2.set_index('Food product')
           fig = food_df_2.plot.bar(stacked = True)
@@ -170,7 +170,7 @@ with col2:
 
         if selected_metrics_2 == 'Dairy':
           food_group_2 = 'Dairy'
-          food_df_2 = df[df['Food group'] == food_group]
+          food_df_2 = df[df['Food group'] == food_group_2]
           food_df_2.pop('Total GHG (kg CO2 equivalent/ kg product)')
           food_df_2 = food_df_2.set_index('Food product')
           fig = food_df_2.plot.bar(stacked = True)
@@ -178,7 +178,7 @@ with col2:
 
         if selected_metrics_2 == 'Other':
           food_group_2 = 'Miscellaneous'
-          food_df_2 = df[df['Food group'] == food_group]
+          food_df_2 = df[df['Food group'] == food_group_2]
           food_df_2.pop('Total GHG (kg CO2 equivalent/ kg product)')
           food_df_2 = food_df_2.set_index('Food product')
           fig = food_df_2.plot.bar(stacked = True)
