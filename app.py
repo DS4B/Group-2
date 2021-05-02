@@ -207,7 +207,7 @@ mass_list = []
 x = 0
 for item in save_list:
   st.write(save_list[x])
-  mass = st.number_input('How many grams of this item did you consume?', min_value=0, key = str(x))
+  mass = st.number_input('How many grams of this item did you consume?', key = str(x))
   mass_list.append(mass)
   x += 1  
 st.markdown(" ")
@@ -225,7 +225,8 @@ def getGHG(save_list, mass_list):
 
 ghg_list = getGHG(save_list,mass_list)
 total_ghg = sum(ghg_list)
-st.write(f'These food items contributed {int(total_ghg)} g CO2 equivalent')
+total_ghg = '{:.2f}'.format(float)
+st.write(f'These food items contributed {total_ghg} g CO2 equivalent')
 
 
 import matplotlib.pyplot as plt
