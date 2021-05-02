@@ -60,67 +60,131 @@ f = new_grouped_df.plot.bar(stacked = True)
 st.pyplot()
 
 st.markdown("## " + 'Total GHG Emission by food group')	
-st.markdown("#### " +"What food group would you like to see?")
+st.markdown("#### " +"What food groups would you like to see?")
 
-selected_metrics = st.selectbox(
+col1, col2 = st.beta_columns(2)
+with col1:
+        selected_metrics = st.selectbox(
     label="Choose...", options=['Plant starch','Plant protein','Animal protein','Vegetable','Fruit','Dairy','Other'])
 
-if selected_metrics == 'Plant starch':
-  food_group = 'Plant starch'
-  food_df = df[df['Food group'] == food_group]
-  food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
-  food_df = food_df.set_index('Food product')
-  fig = food_df.plot.bar(stacked = True)
-  st.pyplot()
-  
-if selected_metrics == 'Plant protein':
-  food_group = 'Plant protein'
-  food_df = df[df['Food group'] == food_group]
-  food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
-  food_df = food_df.set_index('Food product')
-  fig = food_df.plot.bar(stacked = True)
-  st.pyplot()
-  
-if selected_metrics == 'Animal protein':
-  food_group = 'Animal protein'
-  food_df = df[df['Food group'] == food_group]
-  food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
-  food_df = food_df.set_index('Food product')
-  fig = food_df.plot.bar(stacked = True)
-  st.pyplot()
-  
-if selected_metrics == 'Vegetable':
-  food_group = 'Vegetable'
-  food_df = df[df['Food group'] == food_group]
-  food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
-  food_df = food_df.set_index('Food product')
-  fig = food_df.plot.bar(stacked = True)
-  st.pyplot()
-  
-  
-if selected_metrics == 'Fruit':
-  food_group =  'Fruit'
-  food_df = df[df['Food group'] == food_group]
-  food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
-  food_df = food_df.set_index('Food product')
-  fig = food_df.plot.bar(stacked = True)
-  st.pyplot()
-  
-if selected_metrics == 'Dairy':
-  food_group = 'Dairy'
-  food_df = df[df['Food group'] == food_group]
-  food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
-  food_df = food_df.set_index('Food product')
-  fig = food_df.plot.bar(stacked = True)
-  st.pyplot()
-  
-if selected_metrics == 'Other':
-  food_group = 'Miscellaneous'
-  food_df = df[df['Food group'] == food_group]
-  food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
-  food_df = food_df.set_index('Food product')
-  fig = food_df.plot.bar(stacked = True)
-  st.pyplot()
+        if selected_metrics == 'Plant starch':
+          food_group = 'Plant starch'
+          food_df = df[df['Food group'] == food_group]
+          food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
+          food_df = food_df.set_index('Food product')
+          fig = food_df.plot.bar(stacked = True)
+          st.pyplot()
+
+        if selected_metrics == 'Plant protein':
+          food_group = 'Plant protein'
+          food_df = df[df['Food group'] == food_group]
+          food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
+          food_df = food_df.set_index('Food product')
+          fig = food_df.plot.bar(stacked = True)
+          st.pyplot()
+
+        if selected_metrics == 'Animal protein':
+          food_group = 'Animal protein'
+          food_df = df[df['Food group'] == food_group]
+          food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
+          food_df = food_df.set_index('Food product')
+          fig = food_df.plot.bar(stacked = True)
+          st.pyplot()
+
+        if selected_metrics == 'Vegetable':
+          food_group = 'Vegetable'
+          food_df = df[df['Food group'] == food_group]
+          food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
+          food_df = food_df.set_index('Food product')
+          fig = food_df.plot.bar(stacked = True)
+          st.pyplot()
+
+
+        if selected_metrics == 'Fruit':
+          food_group =  'Fruit'
+          food_df = df[df['Food group'] == food_group]
+          food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
+          food_df = food_df.set_index('Food product')
+          fig = food_df.plot.bar(stacked = True)
+          st.pyplot()
+
+        if selected_metrics == 'Dairy':
+          food_group = 'Dairy'
+          food_df = df[df['Food group'] == food_group]
+          food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
+          food_df = food_df.set_index('Food product')
+          fig = food_df.plot.bar(stacked = True)
+          st.pyplot()
+
+        if selected_metrics == 'Other':
+          food_group = 'Miscellaneous'
+          food_df = df[df['Food group'] == food_group]
+          food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
+          food_df = food_df.set_index('Food product')
+          fig = food_df.plot.bar(stacked = True)
+          st.pyplot()
+        
+        
+with col2:       
+        selected_metrics = st.selectbox(
+            label="Choose...", options=['Plant starch','Plant protein','Animal protein','Vegetable','Fruit','Dairy','Other'])
+
+        if selected_metrics == 'Plant starch':
+          food_group = 'Plant starch'
+          food_df = df[df['Food group'] == food_group]
+          food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
+          food_df = food_df.set_index('Food product')
+          fig = food_df.plot.bar(stacked = True)
+          st.pyplot()
+
+        if selected_metrics == 'Plant protein':
+          food_group = 'Plant protein'
+          food_df = df[df['Food group'] == food_group]
+          food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
+          food_df = food_df.set_index('Food product')
+          fig = food_df.plot.bar(stacked = True)
+          st.pyplot()
+
+        if selected_metrics == 'Animal protein':
+          food_group = 'Animal protein'
+          food_df = df[df['Food group'] == food_group]
+          food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
+          food_df = food_df.set_index('Food product')
+          fig = food_df.plot.bar(stacked = True)
+          st.pyplot()
+
+        if selected_metrics == 'Vegetable':
+          food_group = 'Vegetable'
+          food_df = df[df['Food group'] == food_group]
+          food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
+          food_df = food_df.set_index('Food product')
+          fig = food_df.plot.bar(stacked = True)
+          st.pyplot()
+
+
+        if selected_metrics == 'Fruit':
+          food_group =  'Fruit'
+          food_df = df[df['Food group'] == food_group]
+          food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
+          food_df = food_df.set_index('Food product')
+          fig = food_df.plot.bar(stacked = True)
+          st.pyplot()
+
+        if selected_metrics == 'Dairy':
+          food_group = 'Dairy'
+          food_df = df[df['Food group'] == food_group]
+          food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
+          food_df = food_df.set_index('Food product')
+          fig = food_df.plot.bar(stacked = True)
+          st.pyplot()
+
+        if selected_metrics == 'Other':
+          food_group = 'Miscellaneous'
+          food_df = df[df['Food group'] == food_group]
+          food_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
+          food_df = food_df.set_index('Food product')
+          fig = food_df.plot.bar(stacked = True)
+          st.pyplot()
 
 #---------------------------ANGIE----------------------------
 
