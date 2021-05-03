@@ -43,6 +43,8 @@ components.html(total_co2_map, width = 900, height = 500, scrolling = True)
 components.html(co2_stacked, width = 900, height = 500, scrolling = True)
 
 #---------------------------YAN----------------------------
+st.header("GHG Emission by Food groups and Production Stages")
+
 df = pd.read_csv("GHG avg by food groups.csv")
 avg_ghg = df.pop('Avg GHG (kg CO2 equivalent/ kg product)')
 df = df.dropna()
@@ -51,16 +53,18 @@ grouped_df = df.groupby(by=['Food group']).mean()
 grouped_df = grouped_df.sort_values(by = 'Total GHG (kg CO2 equivalent/ kg product)', ascending = False)
 st.write(grouped_df)
 
+col1, col2 = st.beta_columns(2)
+with col1:
+        st.text("Animal proteins contribute the most to food carbon footprint :(")
+with col2: 
+        # Create bar chart for Total GHG by food group
+        st.set_option('deprecation.showPyplotGlobalUse', False)
+        rm_total = grouped_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
+        new_grouped_df = grouped_df
+        f = new_grouped_df.plot.bar(stacked = True)
+        st.pyplot()
 
-# Create bar chart for Total GHG by food group
-st.set_option('deprecation.showPyplotGlobalUse', False)
-rm_total = grouped_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
-new_grouped_df = grouped_df
-f = new_grouped_df.plot.bar(stacked = True)
-st.pyplot()
-
-st.markdown("## " + 'Total GHG Emission by food group')	
-st.markdown("#### " +"What food groups would you like to see?")
+st.markdown("See what food products are in each food group")
 
 col1, col2 = st.beta_columns(2)
 with col1:
