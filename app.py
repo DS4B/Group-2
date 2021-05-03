@@ -42,7 +42,7 @@ height='563' style='display:none;'><param name='host_url' value='https%3A%2F%2Fp
 <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;dsbfinal' /><param name='name' value='DataScienceforBiotechnology&#47;
 Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object></div>"""
 
-st.header("Visualizating GHG Emissions")
+st.header("Visualizing GHG Emissions")
 
 st.markdown("Total CO2 Emissions Annually")
 components.html(total_co2_map, width = 900, height = 500, scrolling = True)
@@ -208,6 +208,7 @@ with col2:
           st.pyplot()
                 
 st.header("How does each food group contribute to different production stages?")
+st.markdown(" ")
 col1, col2 = st.beta_columns(2)
 with col1:
         stage = st.selectbox(label = '',options=['Land use', 'Animal Feed', 'Farm','Processing','Transport', 'Packging','Retail'])
