@@ -44,7 +44,14 @@ components.html(co2_stacked, width = 900, height = 500, scrolling = True)
 #---------------------------YAN----------------------------
 st.markdown(" ")
 st.header("GHG Emission by Food groups and Production Stages")
+                     
+df = pd.read_csv("GHG avg by food groups.csv")
+avg_ghg = df.pop('Avg GHG (kg CO2 equivalent/ kg product)')
+df = df.dropna()
 
+grouped_df = df.groupby(by=['Food group']).mean()
+grouped_df = grouped_df.sort_values(by = 'Total GHG (kg CO2 equivalent/ kg product)', ascending = False)
+st.write(grouped_df)
 col1, col2 = st.beta_columns(2)
 with col1:
         st.markdown(" ")
@@ -53,36 +60,18 @@ with col1:
         st.image(image, use_column_width = True)
         
 with col2:
-        st.markdown(" ")
-        st.markdown(" ")
-        st.markdown(" ")
-        st.markdown("- Production: land use change (think deforestation), animal feed (GHG coming from production of food for livestock), and farm (think methane emissions from cows and rice, gases produced by breakdown of manure, etc.)")
-        st.markdown("- Processing: emission to convert agricultural products to final food products")
-        st.markdown("- Transport, packaging, and retail")
-     
-
-st.markdown("GHG emission is quantified in CO2 equivalent, as GHGs such as methane and nitrous oxide are significantly more powerful than CO2 in their global warming potentials (standardization to CO2's global warming potential).")
-st.markdown(" ")            
-            
-df = pd.read_csv("GHG avg by food groups.csv")
-avg_ghg = df.pop('Avg GHG (kg CO2 equivalent/ kg product)')
-df = df.dropna()
-
-grouped_df = df.groupby(by=['Food group']).mean()
-grouped_df = grouped_df.sort_values(by = 'Total GHG (kg CO2 equivalent/ kg product)', ascending = False)
-st.write(grouped_df)
-
-col1, col2 = st.beta_columns(2)
-with col1:
-        st.markdown("Animal proteins contribute the most to food carbon footprint :(")
-with col2: 
-        # Create bar chart for Total GHG by food group
         st.set_option('deprecation.showPyplotGlobalUse', False)
         rm_total = grouped_df.pop('Total GHG (kg CO2 equivalent/ kg product)')
         new_grouped_df = grouped_df
         f = new_grouped_df.plot.bar(stacked = True)
         st.pyplot()
-
+        
+st.markdown("- Production: land use change (think deforestation), animal feed (GHG coming from production of food for livestock), and farm (think methane emissions from cows and rice, gases produced by breakdown of manure, etc.)")
+st.markdown("- Processing: emission to convert agricultural products to final food products")
+st.markdown("- Transport, packaging, and retail")
+st.markdown("GHG emission is quantified in CO2 equivalent, as GHGs such as methane and nitrous oxide are significantly more powerful than CO2 in their global warming potentials (standardization to CO2's global warming potential).")
+st.markdown(" ")            
+            
 st.header("What food products are in each food group?")
 
 col1, col2 = st.beta_columns(2)
