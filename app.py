@@ -8,18 +8,12 @@ st.text('Spring 2021')
 import pandas as pd
 from PIL import Image
 
-st.markdown("A lot of people underestimate the greenhouse gas (GHG) contribution of the food production chain. In reality, food production contributes 26% of global GHG emissions. Using datasets from Hannah Ritchie and Max Roser's *Our World in Data documentation* (https://ourworldindata.org/environmental-impacts-of-food), we aim to visualize GHG associated with different food groups across stages of the food production chain.")
+st.markdown("A lot of people underestimate the greenhouse gas (GHG) contribution of the food production chain. In reality, food production contributes 26% of global GHG emissions. Using datasets from Hannah Ritchie and Max Roser's *Our World in Data* documentation (https://ourworldindata.org/environmental-impacts-of-food), we aim to visualize GHG emissions associated with different food groups across stages of the food production chain.")
 st.markdown(" ")
 st.markdown(" ")
 st.markdown(" ")
 
-col1, col2 = st.beta_columns(2)
-with col1:
-        image = Image.open('food_production_chain.jpeg')
-        st.image(image, use_column_width = True)
-        
-with col2:
-        st.write('What is this image and why we should be talking about food carbon footprint!')
+
 #----------------------------JoJo----------------------------------------------------------------------------------------------------------------------------------
         
 import streamlit.components.v1 as components
@@ -49,6 +43,14 @@ components.html(co2_stacked, width = 900, height = 500, scrolling = True)
 
 #---------------------------YAN----------------------------
 st.header("GHG Emission by Food groups and Production Stages")
+
+col1, col2 = st.beta_columns(2)
+with col1:
+        image = Image.open('food_production_chain.jpeg')
+        st.image(image, use_column_width = True)
+        
+with col2:
+        st.write('What is this image and why we should be talking about food carbon footprint!')
 
 df = pd.read_csv("GHG avg by food groups.csv")
 avg_ghg = df.pop('Avg GHG (kg CO2 equivalent/ kg product)')
