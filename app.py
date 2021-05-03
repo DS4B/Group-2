@@ -8,7 +8,7 @@ st.text('Spring 2021')
 import pandas as pd
 from PIL import Image
 
-st.markdown("A lot of people underestimate the greenhouse gas (GHG) contribution of the food production chain. In reality, food production contributes 26% of global GHG emissions. Using datasets from Hannah Ritchie and Max Roser's 'Environmental impacts of food production,' we aim to visualize GHG associated with different food groups across stages of the food production chain.")
+st.markdown("A lot of people underestimate the greenhouse gas (GHG) contribution of the food production chain. In reality, food production contributes 26% of global GHG emissions. Using datasets from Hannah Ritchie and Max Roser's '"'Environmental impacts of food production,'"' we aim to visualize GHG associated with different food groups across stages of the food production chain.")
 st.markdown(" ")
 st.markdown(" ")
 st.markdown(" ")
@@ -60,7 +60,7 @@ st.write(grouped_df)
 
 col1, col2 = st.beta_columns(2)
 with col1:
-        st.text("Animal proteins contribute the most to food carbon footprint :(")
+        st.markdown("Animal proteins contribute the most to food carbon footprint :(")
 with col2: 
         # Create bar chart for Total GHG by food group
         st.set_option('deprecation.showPyplotGlobalUse', False)
