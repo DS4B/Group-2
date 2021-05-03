@@ -293,7 +293,7 @@ def getGHG(save_list, mass_list):
 ghg_list = getGHG(save_list,mass_list)
 total_ghg = sum(ghg_list)
 total_ghg = '{:.2f}'.format(total_ghg)
-st.write(f'These food items contributed {total_ghg} g CO2 equivalent')
+st.markdown('####"+f'These food items contributed {total_ghg} g CO2 equivalent')
 
 
 import matplotlib.pyplot as plt
