@@ -332,3 +332,7 @@ st.markdown("- Transport, packaging, and retail do not contribute as much GHG as
 st.markdown("- Livestocks, especially cows raised for beef, produce so much more GHG compared to crops. It is estimated that going from current diets to diets that exclude animal products would reduce food's GHG emissions by 49% (Poore and Nemecek 2018).")
 st.markdown("- We have only visualized the GHG aspect of food's environmental impact. Check out (https://ourworldindata.org/environmental-impacts-of-food) for visualizations on other impacts such as water use and eutrophication!")
 
+st.markdown(" ")
+st.header("We would like to thank all of the researchers who contributed to the following documentations. The datasets used to build the visualizations on this page were taken from Hannah Ritchie and Max Roser's page, where data from many other researchers including Poore and Nemecek is compiled, visualized, and analyzed.")
+st.markdown("Hannah Ritchie and Max Roser (2020) - 'Environmental impacts of food production'. Published online at OurWorldInData.org. Retrieved from: 'https://ourworldindata.org/environmental-impacts-of-food' [Online Resource]")
+st.markdown("Poore, J., & Nemecek, T. (2018). Reducing food’s environmental impacts through producers and consumers. Science, 360(6392), 987-992.")
