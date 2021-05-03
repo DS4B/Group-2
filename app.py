@@ -215,6 +215,7 @@ with col1:
         stage = st.selectbox(label = '',options=['Land use', 'Animal Feed', 'Farm','Processing','Transport', 'Packiging','Retail'])
         st.subheader(stage)
         if stage == 'Land use':
+                stage = 'Land use change'
                 fig = new_grouped_df.plot.bar(y = 'Land use change')
                 st.pyplot()
         if stage == 'Animal Feed':
