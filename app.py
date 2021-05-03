@@ -54,8 +54,6 @@ grouped_df = grouped_df.sort_values(by = 'Total GHG (kg CO2 equivalent/ kg produ
 st.write(grouped_df)
 col1, col2 = st.beta_columns(2)
 with col1:
-        st.markdown(" ")
-        st.markdown("The food production chain:")
         image = Image.open('food_production_chain.jpeg')
         st.image(image, use_column_width = True)
         
