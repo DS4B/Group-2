@@ -192,7 +192,7 @@ with col2:
 
 #---------------------------ANGIE----------------------------
 
-st.markdown(***)
+st.markdown(" ")
 st.header("Your turn! How much GHG does your meal contribute?")
 
 # Make food_dict a global variable so my functions can have access to it
