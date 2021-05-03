@@ -48,6 +48,7 @@ st.header("GHG Emission by Food groups and Production Stages")
 col1, col2 = st.beta_columns(2)
 with col1:
         st.markdown(" ")
+        st.markdown(" ")
         image = Image.open('food_production_chain.jpeg')
         st.image(image, use_column_width = True)
         
@@ -59,6 +60,9 @@ with col2:
      
 
 st.markdown(" ")
+st.markdown("GHG emission is quantified in CO2 equivalent, as GHGs such as methane and nitrous oxide are significantly more powerful than CO2 in their global warming potentials.")
+            
+            
 df = pd.read_csv("GHG avg by food groups.csv")
 avg_ghg = df.pop('Avg GHG (kg CO2 equivalent/ kg product)')
 df = df.dropna()
