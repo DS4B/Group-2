@@ -83,7 +83,7 @@ with col2:
         f = new_grouped_df.plot.bar(stacked = True)
         st.pyplot()
 
-st.header("See what food products are in each food group")
+st.header("What food products are in each food group?")
 
 col1, col2 = st.beta_columns(2)
 with col1:
@@ -208,7 +208,70 @@ with col2:
           food_df_2 = food_df_2.set_index('Food product')
           fig = food_df_2.plot.bar(stacked = True)
           st.pyplot()
-
+                
+st.header("How does each food group contribute to different production stages?")
+col1, col2 = st.beta_columns(2)
+with col1:
+        stage = st.selectbox(label = '',options=['Land use', 'Animal Feed', 'Farm','Processing','Transport', 'Packiging','Retail'])
+        st.subheader(stage)
+        if stage == 'Land use':
+                fig = new_grouped_df.plot.bar(y = 'Land use change')
+                st.pyplot()
+        if stage == 'Animal Feed':
+                fig = new_grouped_df.plot.bar(y = 'Animal Feed')
+                st.pyplot()
+        if stage == 'Processing':
+                fig = new_grouped_df.plot.bar(y = 'Prcoessing')
+                st.pyplot()
+        if stage == 'Transport':
+                fig = new_grouped_df.plot.bar(y = 'Transport')
+                st.pyplot()
+        if stage == 'Packiging':
+                fig = new_grouped_df.plot.bar(y = 'Packiging')
+                st.pyplot()
+        if stage == 'Retail':
+                fig = new_grouped_df.plot.bar(y = 'Retail')
+                st.pyplot()
+with col2:
+        food_group_ = st.selectbox(label = '', options = ['Plant starch','Plant protein','Animal protein','Vegetable','Fruit','Dairy','Other'], key = "3")
+        col2.header(food_group_)
+        
+        if food_group_ == 'Plant starch':
+          food_df_3 = df[df['Food group'] == food_group_]
+          food_df_3 = food_df_3.set_index('Food product')
+          fig = food_df_3.plot.bar(y = stage)
+          st.pyplot()
+        if food_group_ == 'Plant protein':
+          food_df_3 = df[df['Food group'] == food_group_]
+          food_df_3 = food_df_3.set_index('Food product')
+          fig = food_df_3.plot.bar(y = stage)
+          st.pyplot()
+        if food_group_ == 'Animal protein':
+          food_df_3 = df[df['Food group'] == food_group_]
+          food_df_3 = food_df_3.set_index('Food product')
+          fig = food_df_3.plot.bar(y = stage)
+          st.pyplot()
+        if food_group_ == 'Vegetable':
+          food_df_3 = df[df['Food group'] == food_group_]
+          food_df_3 = food_df_3.set_index('Food product')
+          fig = food_df_3.plot.bar(y = stage)
+          st.pyplot()
+        if food_group_ == 'Fruit':
+          food_df_3 = df[df['Food group'] == food_group_]
+          food_df_3 = food_df_3.set_index('Food product')
+          fig = food_df_3.plot.bar(y = stage)
+          st.pyplot()
+        if food_group_ == 'Dairy':
+          food_df_3 = df[df['Food group'] == food_group_]
+          food_df_3 = food_df_3.set_index('Food product')
+          fig = food_df_3.plot.bar(y = stage)
+          st.pyplot()
+        if food_group_ == 'Other':
+          food_df_3 = df[df['Food group'] == 'Miscellaneous']
+          food_df_3 = food_df_3.set_index('Food product')
+          fig = food_df_3.plot.bar(y = stage)
+          st.pyplot()
+        
 #---------------------------ANGIE----------------------------
 st.markdown(" ")
 st.header("Your turn! How much GHG does your meal contribute?")
