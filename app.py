@@ -220,6 +220,9 @@ with col1:
         if stage == 'Animal Feed':
                 fig = new_grouped_df.plot.bar(y = 'Animal Feed')
                 st.pyplot()
+        if stage == 'Farm':
+                fig = new_grouped_df.plot.bar(y = 'Farm')
+                st.pyplot()
         if stage == 'Processing':
                 fig = new_grouped_df.plot.bar(y = 'Processing')
                 st.pyplot()
