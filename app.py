@@ -199,7 +199,6 @@ with col2:
           st.pyplot()
 
 #---------------------------ANGIE----------------------------
-
 st.markdown(" ")
 st.header("Your turn! How much GHG does your meal contribute?")
 
@@ -324,3 +323,12 @@ st.subheader("Your food GHG breakdown:")
 fig = plt.pie(ghg_list, explode=None, labels=save_list, colors=None, autopct=lambda pct: func(pct, ghg_list), shadow=False, radius=1, textprops=textprops)
 st.pyplot()
 st.set_option('deprecation.showPyplotGlobalUse', False)
+
+
+st.markdown(" ")
+st.header("Takeaways:")
+st.markdown("- Insert some takeaways from the maps")
+st.markdown("- Transport, packaging, and retail do not contribute as much GHG as the pre-farming and farming stages")
+st.markdown("- Livestocks, especially cows raised for beef, produce so much more GHG compared to crops. It is estimated that going from current diets to diets that exclude animal products would reduce food's GHG emissions by 49% (Poore and Nemecek 2018)."
+st.markdown("- We have only visualized the GHG aspect of food's environmental impact. Check out (https://ourworldindata.org/environmental-impacts-of-food) for visualizations on other impacts such as water use and eutrophication!")
+
