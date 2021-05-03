@@ -49,16 +49,18 @@ col1, col2 = st.beta_columns(2)
 with col1:
         st.markdown(" ")
         st.markdown(" ")
+        st.markdown("The food production chain:")
         image = Image.open('food_production_chain.jpeg')
         st.image(image, use_column_width = True)
         
 with col2:
-        st.markdown("The food production chain:")
+        st.markdown(" ")
         st.markdown("- Production: land use change (think deforestation), animal feed (GHG coming from production of food for livestock), and farm (think methane emissions from cows and rice, gases produced by breakdown of manure, etc.)")
         st.markdown("- Processing: emission to convert agricultural products to final food products")
         st.markdown("- Transport, packaging, and retail")
      
 
+st.markdown(" ")
 st.markdown(" ")
 st.markdown("GHG emission is quantified in CO2 equivalent, as GHGs such as methane and nitrous oxide are significantly more powerful than CO2 in their global warming potentials.")
             
