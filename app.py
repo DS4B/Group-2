@@ -51,7 +51,11 @@ with col1:
         st.image(image, use_column_width = True)
         
 with col2:
-        st.write('What is this image and why we should be talking about food carbon footprint!')
+        st.markdown("Stages of food production:")
+        st.markdown("- Production: land use change (think deforestation), animal feed (GHG coming from production of food for livestock), and farm (think methane emissions from cows and rice, gases produced by breakdown of manure, etc.)")
+        st.markdown("- Processing: emission to convert agricultural products to final food products")
+        st.markdown("- Transport, packaging, and retail")
+     
 
 df = pd.read_csv("GHG avg by food groups.csv")
 avg_ghg = df.pop('Avg GHG (kg CO2 equivalent/ kg product)')
@@ -334,6 +338,7 @@ st.markdown("- We have only visualized the GHG aspect of food's environmental im
 
 st.markdown(" ")
 st.subheader("We would like to thank all of the researchers who contributed to the following documentations. The datasets used to build the visualizations on this page were taken from Hannah Ritchie and Max Roser's page, where data from many other researchers including Poore and Nemecek is compiled, visualized, and analyzed.")
+st.markdown(" ")
 st.markdown(" ")
 st.markdown(" ")
 st.markdown(" ")
