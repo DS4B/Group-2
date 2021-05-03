@@ -83,7 +83,7 @@ with col2:
         f = new_grouped_df.plot.bar(stacked = True)
         st.pyplot()
 
-st.markdown("See what food products are in each food group")
+st.header("See what food products are in each food group")
 
 col1, col2 = st.beta_columns(2)
 with col1:
@@ -149,7 +149,7 @@ with col1:
         
 with col2:       
         selected_metrics_2 = st.selectbox(label = '',options=['Plant starch','Plant protein','Animal protein','Vegetable','Fruit','Dairy','Other'], key = "2")
-        col2.header(selected_metrics)
+        col2.header(selected_metrics_2)
        
 
         if selected_metrics_2 == 'Plant starch':
