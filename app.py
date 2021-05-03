@@ -8,7 +8,7 @@ st.text('Spring 2021')
 import pandas as pd
 from PIL import Image
 
-st.markdown("We often underestimate the greenhouse gas (GHG) emissions associated with the food production chain when in reality, food production contributes 26% of the global GHG emissions. Using datasets from Hannah Ritchie and Max Roser's *Our World in Data* documentation (https://ourworldindata.org/environmental-impacts-of-food), we aim to visualize GHG emissions associated with different food groups across stages of the food production chain. We hope that the visualizations and food-associated GHG calculator we have provided can help to empower consumers to make more sustainable decisions when it comes to their diets.")
+st.markdown("We often underestimate the greenhouse gas (GHG) emissions associated with the food production chain when in reality, food production contributes 26% of the global GHG emissions. Using datasets from Hannah Ritchie and Max Roser's *Our World in Data* documentation (https://ourworldindata.org/environmental-impacts-of-food), we aim to visualize GHG emissions associated with different food groups across stages of the food production chain. We hope that the visualizations and food-associated GHG calculator we are providing can help to empower consumers to make more sustainable decisions when it comes to their diets.")
 st.markdown(" ")
 st.markdown(" ")
 st.markdown(" ")
