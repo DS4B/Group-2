@@ -47,16 +47,18 @@ st.header("GHG Emission by Food groups and Production Stages")
 
 col1, col2 = st.beta_columns(2)
 with col1:
+        st.markdown(" ")
         image = Image.open('food_production_chain.jpeg')
         st.image(image, use_column_width = True)
         
 with col2:
-        st.markdown("Stages of food production:")
+        st.markdown("The food production chain:")
         st.markdown("- Production: land use change (think deforestation), animal feed (GHG coming from production of food for livestock), and farm (think methane emissions from cows and rice, gases produced by breakdown of manure, etc.)")
         st.markdown("- Processing: emission to convert agricultural products to final food products")
         st.markdown("- Transport, packaging, and retail")
      
 
+st.markdown(" ")
 df = pd.read_csv("GHG avg by food groups.csv")
 avg_ghg = df.pop('Avg GHG (kg CO2 equivalent/ kg product)')
 df = df.dropna()
@@ -342,5 +344,6 @@ st.markdown(" ")
 st.markdown(" ")
 st.markdown(" ")
 st.markdown(" ")
-st.markdown("Hannah Ritchie and Max Roser (2020) - 'Environmental impacts of food production'. Published online at OurWorldInData.org. Retrieved from: 'https://ourworldindata.org/environmental-impacts-of-food' [Online Resource]")
-st.markdown("Poore, J., & Nemecek, T. (2018). Reducing food’s environmental impacts through producers and consumers. Science, 360(6392), 987-992.")
+st.markdown(" ")
+st.markdown("- Hannah Ritchie and Max Roser (2020) - 'Environmental impacts of food production'. Published online at OurWorldInData.org. Retrieved from: 'https://ourworldindata.org/environmental-impacts-of-food' [Online Resource]")
+st.markdown("- Poore, J., & Nemecek, T. (2018). Reducing food’s environmental impacts through producers and consumers. Science, 360(6392), 987-992.")
