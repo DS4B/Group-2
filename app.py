@@ -221,7 +221,7 @@ with col1:
                 fig = new_grouped_df.plot.bar(y = 'Animal Feed')
                 st.pyplot()
         if stage == 'Processing':
-                fig = new_grouped_df.plot.bar(y = 'Prcoessing')
+                fig = new_grouped_df.plot.bar(y = 'Processing')
                 st.pyplot()
         if stage == 'Transport':
                 fig = new_grouped_df.plot.bar(y = 'Transport')
@@ -234,7 +234,7 @@ with col1:
                 st.pyplot()
 with col2:
         food_group_ = st.selectbox(label = '', options = ['Plant starch','Plant protein','Animal protein','Vegetable','Fruit','Dairy','Other'], key = "3")
-        col2.header(food_group_)
+        col2.subheader(food_group_)
         
         if food_group_ == 'Plant starch':
           food_df_3 = df[df['Food group'] == food_group_]
