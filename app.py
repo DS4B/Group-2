@@ -64,7 +64,7 @@ st.markdown("#### " +"What food groups would you like to see?")
 
 col1, col2 = st.beta_columns(2)
 with col1:
-        selected_metrics = st.selectbox(label="Choose...", options=['Plant starch','Plant protein','Animal protein','Vegetable','Fruit','Dairy','Other'])
+        selected_metrics = st.selectbox(label="Choose...", options=['Plant starch','Plant protein','Animal protein','Vegetable','Fruit','Dairy','Other'],key = "1")
 
         if selected_metrics == 'Plant starch':
           food_group = 'Plant starch'
@@ -125,7 +125,8 @@ with col1:
         
         
 with col2:       
-        selected_metrics_2 = st.selectbox(label="Choose...", options=['Plant starch','Plant protein','Animal protein','Vegetable','Fruit','Dairy','Other'])
+        selected_metrics_2 = st.selectbox(label="Choose...", options=['Plant starch','Plant protein','Animal protein','Vegetable','Fruit','Dairy','Other'], key = "2")
+       
 
         if selected_metrics_2 == 'Plant starch':
           food_group_2 = 'Plant starch'
