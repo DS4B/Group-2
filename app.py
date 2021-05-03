@@ -42,12 +42,11 @@ height='563' style='display:none;'><param name='host_url' value='https%3A%2F%2Fp
 <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;dsbfinal' /><param name='name' value='DataScienceforBiotechnology&#47;
 Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object></div>"""
 
-st.markdown(" ")
 st.header("Visualizating GHG Emissions")
 
 st.markdown("Total CO2 Emissions Annually")
 components.html(total_co2_map, width = 900, height = 500, scrolling = True)
-st.markdown("How does this commpare to GHG emissions from food production?")
+st.markdown("How does this compare to GHG emissions from food production?")
 components.html(food_ghg_map, width = 900, height = 500, scrolling = True)
 st.markdown("For a clearer comparison...")
 components.html(co2_stacked, width = 900, height = 500, scrolling = True)
