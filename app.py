@@ -212,7 +212,7 @@ with col2:
 st.header("How does each food group contribute to different production stages?")
 col1, col2 = st.beta_columns(2)
 with col1:
-        stage = st.selectbox(label = '',options=['Land use', 'Animal Feed', 'Farm','Processing','Transport', 'Packiging','Retail'])
+        stage = st.selectbox(label = '',options=['Land use', 'Animal Feed', 'Farm','Processing','Transport', 'Packging','Retail'])
         st.subheader(stage)
         if stage == 'Land use':
                 stage = 'Land use change'
@@ -227,8 +227,8 @@ with col1:
         if stage == 'Transport':
                 fig = new_grouped_df.plot.bar(y = 'Transport')
                 st.pyplot()
-        if stage == 'Packiging':
-                fig = new_grouped_df.plot.bar(y = 'Packiging')
+        if stage == 'Packging':
+                fig = new_grouped_df.plot.bar(y = 'Packging')
                 st.pyplot()
         if stage == 'Retail':
                 fig = new_grouped_df.plot.bar(y = 'Retail')
@@ -240,37 +240,37 @@ with col2:
         if food_group_ == 'Plant starch':
           food_df_3 = df[df['Food group'] == food_group_]
           food_df_3 = food_df_3.set_index('Food product')
-          fig = food_df_3.plot.bar(y = stage)
+          fig = food_df_3.plot.bar(y = stage, color = 'green')
           st.pyplot()
         if food_group_ == 'Plant protein':
           food_df_3 = df[df['Food group'] == food_group_]
           food_df_3 = food_df_3.set_index('Food product')
-          fig = food_df_3.plot.bar(y = stage)
+          fig = food_df_3.plot.bar(y = stage,color = 'green')
           st.pyplot()
         if food_group_ == 'Animal protein':
           food_df_3 = df[df['Food group'] == food_group_]
           food_df_3 = food_df_3.set_index('Food product')
-          fig = food_df_3.plot.bar(y = stage)
+          fig = food_df_3.plot.bar(y = stage,color = 'green')
           st.pyplot()
         if food_group_ == 'Vegetable':
           food_df_3 = df[df['Food group'] == food_group_]
           food_df_3 = food_df_3.set_index('Food product')
-          fig = food_df_3.plot.bar(y = stage)
+          fig = food_df_3.plot.bar(y = stage,color = 'green')
           st.pyplot()
         if food_group_ == 'Fruit':
           food_df_3 = df[df['Food group'] == food_group_]
           food_df_3 = food_df_3.set_index('Food product')
-          fig = food_df_3.plot.bar(y = stage)
+          fig = food_df_3.plot.bar(y = stage,color = 'green')
           st.pyplot()
         if food_group_ == 'Dairy':
           food_df_3 = df[df['Food group'] == food_group_]
           food_df_3 = food_df_3.set_index('Food product')
-          fig = food_df_3.plot.bar(y = stage)
+          fig = food_df_3.plot.bar(y = stage,color = 'green')
           st.pyplot()
         if food_group_ == 'Other':
           food_df_3 = df[df['Food group'] == 'Miscellaneous']
           food_df_3 = food_df_3.set_index('Food product')
-          fig = food_df_3.plot.bar(y = stage)
+          fig = food_df_3.plot.bar(y = stage,color = 'green')
           st.pyplot()
         
 #---------------------------ANGIE----------------------------
