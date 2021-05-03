@@ -1,5 +1,4 @@
 import streamlit as st
-st.set_option('wideMode' , True)
 
 st.title("Food Carbon Footprint")
 st.subheader("DS4B Final Project")
