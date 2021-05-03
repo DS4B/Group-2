@@ -8,7 +8,8 @@ st.text('Spring 2021')
 import pandas as pd
 from PIL import Image
 
-st.subheader("A lot of people underestimate the greenhouse gas (GHG) contribution of the food production line. In reality, food production contributes 26% of global GHG emissions")
+st.subheader("A lot of people underestimate the greenhouse gas (GHG) contribution of the food production line. In reality, food production contributes 26% of global GHG emissions.")
+st.markdown(" ")
 st.markdown(" ")
 st.markdown(" ")
 
