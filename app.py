@@ -8,7 +8,9 @@ st.text('Spring 2021')
 import pandas as pd
 from PIL import Image
 
-st.subheader("A lot of people underestimate the greenhouse gas (GHG) contribution of the food production line. In reality, food production contributes 26% of global GHG emissions")
+st.text("A lot of people underestimate the greenhouse gas (GHG) contribution of the food production line. In reality, food production contributes 26% of global GHG emissions")
+st.markdown(" ")
+st.markdown(" ")
 
 col1, col2 = st.beta_columns(2)
 with col1:
