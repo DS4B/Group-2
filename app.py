@@ -55,12 +55,13 @@ with col1:
 with col2:
         st.markdown(" ")
         st.markdown(" ")
+        st.markdown(" ")
         st.markdown("- Production: land use change (think deforestation), animal feed (GHG coming from production of food for livestock), and farm (think methane emissions from cows and rice, gases produced by breakdown of manure, etc.)")
         st.markdown("- Processing: emission to convert agricultural products to final food products")
         st.markdown("- Transport, packaging, and retail")
      
 
-st.markdown("GHG emission is quantified in CO2 equivalent, as GHGs such as methane and nitrous oxide are significantly more powerful than CO2 in their global warming potentials.")
+st.markdown("GHG emission is quantified in CO2 equivalent, as GHGs such as methane and nitrous oxide are significantly more powerful than CO2 in their global warming potentials (standardization to CO2's global warming potential).")
 st.markdown(" ")            
             
 df = pd.read_csv("GHG avg by food groups.csv")
