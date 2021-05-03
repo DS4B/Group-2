@@ -192,7 +192,7 @@ with col2:
 
 #---------------------------ANGIE----------------------------
 
-st.header("How much food GHG does your meal contribute?")
+st.header("Your turn! How much GHG does your meal contribute?")
 
 # Make food_dict a global variable so my functions can have access to it
 global food_dict
@@ -248,7 +248,7 @@ food_dict = {'Wheat & Rye': 1.4,
 }
 
 
-save_list = st.multiselect('Which food items would you like to include?', list(food_dict))
+save_list = st.multiselect('Which food items are included in your meal? You can select multiple items here', list(food_dict))
 st.markdown(" ")
 
 
@@ -290,10 +290,17 @@ def getGHG(save_list, mass_list):
     
   return ghg_list
 
+st.markdown("""
+<style>
+.med-font {
+    font-size:20px !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 ghg_list = getGHG(save_list,mass_list)
 total_ghg = sum(ghg_list)
-total_ghg = '{:.2f}'.format(total_ghg)
-st.text(f'These food items contributed {total_ghg} g CO2 equivalent')
+st.markdown(f'<p class="med-font">These food items contributed {int(total_ghg)} g CO2 equivalent</p>', unsafe_allow_html=True)
 
 
 import matplotlib.pyplot as plt
@@ -303,8 +310,8 @@ def func(pct, allvals):
     absolute = int(round(pct/100.*np.sum(allvals)))
     return "{:.1f}%\n({:d} g)".format(pct, absolute)
   
+textprops = {"fontsize": 8}  
 st.subheader("Your food GHG breakdown:")
-fig = plt.pie(ghg_list, explode=None, labels=save_list, colors=None, autopct=lambda pct: func(pct, ghg_list), shadow=False, radius=0.8)
+fig = plt.pie(ghg_list, explode=None, labels=save_list, colors=None, autopct=lambda pct: func(pct, ghg_list), shadow=False, radius=1, textprops=textprops)
 st.pyplot()
 st.set_option('deprecation.showPyplotGlobalUse', False)
-      
